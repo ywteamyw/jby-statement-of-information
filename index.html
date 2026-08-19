@@ -59,12 +59,6 @@ a{color:inherit;text-decoration:none}
 main{padding-top:128px}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--page-pad)}
 .pp-head{padding-top:48px}
-.pp-crumb{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:13px;line-height:20px;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--mute);margin:0 0 18px;display:flex;align-items:center;gap:10px}
-.pp-crumb a{color:var(--mute);transition:color .2s}
-.pp-crumb a:hover{color:var(--navy)}
-.pp-crumb .s{opacity:.4}
-.pp-crumb .cur{color:var(--ink)}
 .pp-head h1{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:32px;line-height:48px;letter-spacing:0;
   text-transform:uppercase;color:#111;margin:0}
 .pp-lead{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:20px;line-height:32px;color:var(--ink);
@@ -85,9 +79,9 @@ main{padding-top:128px}
 .pp-toc a::before{content:counter(toc);font-family:'Mesmerize',sans-serif;font-size:12px;
   letter-spacing:0.06em;color:#b3b3bb;font-variant-numeric:tabular-nums;transition:color .2s}
 .pp-toc a:hover{color:#111}
-.pp-toc a:hover::before{color:var(--navy)}
+.pp-toc a:hover::before{color:#111}
 .pp-toc a.on{color:#111;font-weight:400}
-.pp-toc a.on::before{color:var(--navy)}
+.pp-toc a.on::before{color:#111}
 /* Mobile contents (collapsible) */
 .pp-toc-m{display:none}
 
@@ -120,17 +114,6 @@ main{padding-top:128px}
   text-transform:uppercase;color:var(--navy);display:inline-flex;align-items:center;gap:10px;margin-top:8px;transition:color .2s}
 .pp-ext svg{width:16px;height:16px;flex:none}
 .pp-ext:hover{color:var(--navy-d)} /* colour only, no move */
-
-/* Contact card */
-.pp-card{background:var(--section);border-radius:3px;padding:26px 30px 28px;margin:26px 0 0}
-.pp-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
-.pp-card h3{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:12px;line-height:18px;letter-spacing:0.12em;
-  text-transform:uppercase;color:#111;margin:0 0 12px}
-.pp-card .tel{font-family:'Myriad Pro',sans-serif;font-weight:400;font-size:16px;line-height:26px;
-  color:var(--ink);transition:color .2s}
-.pp-card .tel:hover{color:var(--navy)} /* colour only, no move */
-.pp-card address{font-family:'Myriad Pro',sans-serif;font-style:normal;font-weight:400;font-size:16px;line-height:26px;color:var(--ink);margin:0}
-.pp-card address span{display:block}
 
 /* ============ CONTACT BAND ============ */
 .expert{margin-top:96px;background:var(--navy);color:#fff;padding:0 40px;text-align:center;min-height:315px;
@@ -203,8 +186,6 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
   .pp-sec p,.pp-def dd,.pp-def dd .v{font-size:16px;line-height:28px}
   .pp-def{grid-template-columns:1fr;gap:6px;padding:18px 0}
   .pp-def:first-child{padding-top:0}
-  .pp-card{padding:24px 24px 26px}
-  .pp-card-grid{grid-template-columns:1fr;gap:26px}
   .expert{padding:56px 24px;min-height:auto;margin-top:72px}
   .expert h2{font-size:22px;line-height:32px}
   .foot-grid{grid-template-columns:1fr}
@@ -213,7 +194,6 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
   .back-top{display:none}
 }
 @media (max-width:520px){
-  .pp-crumb{font-size:12px;gap:8px}
   .pp-doc{max-width:none}
 }
 
@@ -227,7 +207,6 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
   .pp-doc{max-width:none}
   .pp-sec{break-inside:avoid}
   .pp-sec + .pp-sec{margin-top:26px}
-  .pp-card{background:#fff;border:0.5pt solid #ccc}
   .reveal,.split-words .w{opacity:1 !important;transform:none !important}
   a[href^="tel"]::after{content:" (" attr(href) ")";font-size:9pt;color:#666}
 }
@@ -250,7 +229,6 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 
   <!-- ============ PAGE HEAD ============ -->
   <section class="wrap pp-head">
-    <p class="pp-crumb reveal"><a href="#">Home</a><span class="s">/</span><a href="#">Legal</a><span class="s">/</span><span class="cur">Statement of Information</span></p>
     <h1 class="split-words" data-split>Statement of Information</h1>
     <p class="pp-lead reveal d1">Corporate and business information for Jeff Brown Yachts, Inc.</p>
 
@@ -339,22 +317,16 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 
       <article class="pp-sec reveal" id="contact-info">
         <h2>5. Contact Jeff Brown Yachts</h2>
-        <div class="pp-card">
-          <div class="pp-card-grid">
-            <div>
-              <h3>By written communication</h3>
-              <address>
-                <span>Jeff Brown Yachts, Inc.</span>
-                <span>2330 Shelter Island Drive, Suite 105</span>
-                <span>San Diego, CA 92106</span>
-              </address>
-            </div>
-            <div>
-              <h3>By phone</h3>
-              <a class="tel" href="tel:+16192229899">619-222-9899</a>
-            </div>
+        <dl class="pp-defs">
+          <div class="pp-def">
+            <dt>Mailing address</dt>
+            <dd><address class="v">Jeff Brown Yachts, Inc.<span>2330 Shelter Island Drive, Suite 105</span><span>San Diego, CA 92106</span></address></dd>
           </div>
-        </div>
+          <div class="pp-def">
+            <dt>Main phone</dt>
+            <dd><span class="v"><a href="tel:+16192229899">619-222-9899</a></span></dd>
+          </div>
+        </dl>
       </article>
 
     </div>
