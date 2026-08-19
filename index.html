@@ -115,15 +115,14 @@ main{padding-top:128px}
 .pp-ext:hover{color:var(--navy-d)} /* colour only, no move */
 
 /* ============ CONTACT BAND ============ */
-.expert{margin-top:120px;background:linear-gradient(180deg,#456a83 0%,#3b5c72 55%,#335063 100%);color:#fff;
-  padding:104px 40px 108px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.expert h2{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:28px;line-height:40px;color:#fff;letter-spacing:0.01em;
-  text-transform:uppercase;margin:0 0 18px;max-width:900px}
-.expert p{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:17px;line-height:30px;color:rgba(255,255,255,0.78);
-  margin:0 0 40px;max-width:720px}
-.expert .btn{display:inline-flex;align-items:center;justify-content:center;height:52px;padding:0 44px;background:transparent;color:#fff;
-  font-family:'Mesmerize',sans-serif;font-weight:300;font-size:16px;line-height:20px;letter-spacing:0.06em;text-transform:uppercase;
-  border:0.5px solid #fff;cursor:pointer;transition:background .25s ease}
+.expert{margin-top:96px;background:var(--navy);color:#fff;padding:0 40px;text-align:center;min-height:315px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center}
+.expert h2{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:28px;line-height:38px;color:#fff;letter-spacing:0;
+  text-transform:uppercase;margin:0 0 12px}
+.expert p{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:16px;line-height:24px;color:rgba(255,255,255,0.85);margin:0 0 28px;max-width:640px}
+.expert .btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 32px;background:transparent;color:#fff;
+  font-family:'Mesmerize',sans-serif;font-weight:300;font-size:16px;line-height:20px;letter-spacing:0;text-transform:uppercase;
+  border:0.5px solid #fff;cursor:pointer;transition:.25s}
 .expert .btn:hover{background:rgba(255,255,255,0.14)} /* colour only, no move */
 
 /* ============ FOOTER ============ */
@@ -198,7 +197,7 @@ footer:has(.foot-legal){padding-bottom:40px}
   .pp-sec p,.pp-def dd,.pp-def dd .v{font-size:16px;line-height:28px}
   .pp-def{grid-template-columns:1fr;gap:6px;padding:18px 0}
   .pp-def:first-child{padding-top:0}
-  .expert{padding:72px 24px 76px;margin-top:80px}
+  .expert{padding:56px 24px;min-height:auto;margin-top:72px}
   .expert h2{font-size:22px;line-height:32px}
   .expert p{font-size:16px;line-height:28px;margin-bottom:32px}
   .foot-grid{grid-template-columns:1fr}
