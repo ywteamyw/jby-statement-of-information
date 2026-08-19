@@ -180,7 +180,7 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
   .pp-toc-m summary{list-style:none;cursor:pointer;padding:18px 0;font-family:'Mesmerize',sans-serif;font-weight:300;
     font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:#111;display:flex;align-items:center;justify-content:space-between}
   .pp-toc-m summary::-webkit-details-marker{display:none}
-  .pp-toc-m summary svg{width:16px;height:16px;color:var(--navy);transition:transform .25s}
+  .pp-toc-m summary svg{width:16px;height:16px;color:#6a6a74;transition:transform .25s}
   .pp-toc-m[open] summary svg{transform:rotate(90deg)}
   .pp-toc-m .pp-toc{padding-bottom:14px}
   .pp-sec h2{font-size:22px;line-height:32px}
@@ -197,6 +197,12 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 }
 @media (max-width:520px){
   .pp-doc{max-width:none}
+}
+
+@media (max-width:560px){
+  /* info@jeffbrownyachts.com is one unbreakable token in uppercase Mesmerize */
+  .foot-grid{grid-template-columns:minmax(0,1fr)}
+  .foot-col p{font-size:14px;line-height:20px;overflow-wrap:break-word}
 }
 
 /* ============ PRINT ============ */
